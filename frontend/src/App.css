@@ -1,0 +1,130 @@
+/* Global page style */
+body {
+  margin: 0;
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  background: linear-gradient(135deg, #0a192f, #1e3a8a);
+  color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout container */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Shared panel style */
+.panel {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+/* Description panel */
+.description-panel {
+  background: linear-gradient(160deg, #0b2545, #133c7e);
+}
+
+.description-panel h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description-panel p {
+  line-height: 1.6;
+  color: #aab4d4;
+}
+
+/* Action panel */
+.action-panel {
+  align-items: center;
+  background: linear-gradient(160deg, #12274d, #1b3f8b);
+}
+
+.action-panel button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0.6rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-panel button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.divider {
+  width: 2px;
+  height: 25px;
+  background: linear-gradient(to bottom, #60a5fa, transparent);
+  margin: 0.5rem 0;
+}
+
+.status-text {
+  margin-top: 1.5rem;
+  color: #aab4d4;
+  font-size: 0.9rem;
+}
+
+/* Message panel */
+.message-panel {
+  background: linear-gradient(160deg, #112240, #1e3a8a);
+}
+
+.message-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.message-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 60vh;
+  white-space: pre-wrap;
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Mobile fallback */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panel {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .panel:last-child {
+    border-bottom: none;
+  }
+}
