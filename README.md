@@ -90,4 +90,4 @@ Visit the address shown in the terminal (usually http://localhost:5173) and ensu
 
 ## Author
 
-Shugi Milo (GitHub: [shugimilo](https://github.com/shugimilo))
+Petar Milojević (GitHub: [shugimilo](https://github.com/shugimilo))
