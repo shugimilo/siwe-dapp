@@ -27,7 +27,7 @@ A decentralized authentication application demonstrating how users can securely 
 
 ## Setup & Installation
 
-# Prerequisites
+### Prerequisites
 - Node.js (v18 or higher)
 - NPM (v9 or higher)
 - MetaMask browser extension
