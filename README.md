@@ -27,6 +27,12 @@ A decentralized authentication application demonstrating how users can securely 
 
 ## Setup & Installation
 
+# Prerequisites
+- Node.js (v18 or higher)
+- NPM (v9 or higher)
+- MetaMask browser extension
+- Access to the Sepolia test network
+
 Follow these steps to run the project locally:
 
 1. **Clone the repository:**
