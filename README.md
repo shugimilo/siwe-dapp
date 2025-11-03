@@ -28,10 +28,36 @@ A decentralized authentication application demonstrating how users can securely 
 ## Setup & Installation
 
 ### Prerequisites
-- Node.js (v18 or higher)
+- Node.js (v20.19+ recommended, or ≥ v22.12)
 - NPM (v9 or higher)
 - MetaMask browser extension
 - Access to the Sepolia test network
+- (Optional, for running Hardhat tests) `.env` file containing a private key for your MetaMask account on Sepolia
+
+### Optional `.env` File for Testing
+
+To run tests that interact with the Sepolia blockchain, you can create a `.env` file in the root of the repository:
+
+```text
+SEPOLIA_PRIVATE_KEY=your_metamask_private_key_here
+INFURA_API_KEY=your_infura_project_id_here
+```
+
+- SEPOLIA_PRIVATE_KEY — your account private key (only for testing; never commit this file)
+- INFURA_API_KEY — optional, if you want to connect via Infura instead of a local node
+
+Once the .env file is in place, Hardhat tests can use it to send transactions on Sepolia.
+
+⚠️ Note: You do not need this file to run the frontend. The frontend uses MetaMask to sign messages locally and doesn’t require your private key.
+
+### Getting Your Own Infura API Key
+
+1. Go to [Infura](https://infura.io) and sign up for a free account.
+2. After verifying your email, log in to the dashboard.
+3. Click “Create New Project”.
+4. Give your project a name (e.g., SIWE-DApp-Test).
+5. After creating it, open the project and copy the Project ID — this is your API key.
+6. Use this Project ID in your .env file like so:
 
 Follow these steps to run the project locally:
 
@@ -83,6 +109,8 @@ Visit the address shown in the terminal (usually http://localhost:5173) and ensu
   ```
 - Covers: valid authentications, invalid signatures, nonce replay protection, and time-limited challenges.
 
+⚠️ To run tests that send transactions on Sepolia, make sure you’ve created a .env file as described in the [Setup & Installation](#optional-env-file-for-testing) section, containing your SEPOLIA_PRIVATE_KEY and optional INFURA_API_KEY.
+
 ---
 
 ## References & Resources
@@ -90,7 +118,9 @@ Visit the address shown in the terminal (usually http://localhost:5173) and ensu
 - [EIP-4361: Sign-In with Ethereum](https://eips.ethereum.org/EIPS/eip-4361)
 - [Ethers.js Documentation](https://docs.ethers.io/)
 - [Hardhat Documentation](https://hardhat.org/)
-- MetaMask & Sepolia Faucet: [https://cloud.google.com/application/web3/faucet/ethereum/sepolia](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- [Hardhat Environment Variables Docs](https://hardhat.org/docs/reference/configuration#environment-variables)
+- [MetaMask & Sepolia Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+- [Infura Documentation](https://infura.io/docs)
 
 ---
 
